@@ -78,13 +78,8 @@ describe("pow", function() {
     });
 });
 
-
-function total(numbers) {
-    var result = 0;
-    for (var i = 0; i < numbers.length; i++) {
-        result += numbers[i];
-    }
-    return result;
-}
-
-total([1, 2, 3, 'Hello']);
+describe('some test', function() {
+    it('some one test', function() {
+        
+    });
+});
