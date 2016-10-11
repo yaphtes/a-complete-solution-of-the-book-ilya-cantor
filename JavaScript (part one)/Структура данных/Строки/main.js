@@ -7,6 +7,7 @@ function ucFirst(str) {
 }
 
 
+// tests for task 1
 describe('Возвращает строку str с заглавным первым символом', function() {
     it('При аргументе \'вася\', возвращает \'Вася\'', function() {
         assert.equal(ucFirst('вася'), 'Вася');
@@ -28,6 +29,7 @@ function checkSpam(str) {
 }
 
 
+// tests for task 2
 describe('При наличии спама: \'XXX\' или \'viagra\', возвращает true', function() {
     it('при аргументе: \'buy ViAgRA now\', возвращает true', function() {
         assert.equal(checkSpam('buy ViAgRA now'), true);
@@ -53,6 +55,7 @@ function truncate(str, maxlength) {
 }
 
 
+// tests for task 3
 describe('При необходимости усекает строку str до maxlength', function() {
     it('Строка: \"Вот, что мне хотелось бы сказать на эту тему:\" будет усечена до: \"Вот, что мне хоте...\"', function() {
         assert.equal( truncate('Вот, что мне хотелось бы сказать на эту тему:', 20), 'Вот, что мне хоте...' );
@@ -70,6 +73,8 @@ function extractCurrencyValue(str) {
     return Number( str.slice(1) );
 }
 
+
+// tests for task 4
 describe('Выделяет число из строки $...', function() {
     it('Выделяет число 120 из строки $120', function() {
         assert.equal(extractCurrencyValue('$120'), 120);

@@ -1,4 +1,4 @@
-//  << ОБЩАЯ ИНФОРМАЦИЯ ПО ТЕСТАМ>>
+//  <<<<<<<<<< ОБЩАЯ ИНФОРМАЦИЯ ПО ТЕСТАМ >>>>>>>>>>
 // BDD – поведенческие тесты кода
 //
 // Мы рассмотрим методику тестирования, которая входит в BDD – Behavior Driven Development. Подход BDD давно и с успехом
@@ -34,6 +34,9 @@
 // assert.isTrue(value) – проверяет, что value === true
 // assert.isFalse(value) – проверяет, что value === false
 // …более полный список – в документации(http://chaijs.com/api/assert/)
+//
+//
+//
 describe("pow", function() {
     describe("возводит x в степень n", function() {
         function makeTest(x) {
@@ -80,6 +83,6 @@ describe("pow", function() {
 
 describe('some test', function() {
     it('some one test', function() {
-        
+
     });
 });
