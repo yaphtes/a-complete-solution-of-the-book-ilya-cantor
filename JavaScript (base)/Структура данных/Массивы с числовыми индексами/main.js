@@ -95,38 +95,58 @@
 
 
 // task 9
-function reshetoErato(n) {
-
-    var arr = [];
-    for (var i = 2; i <= n; i++) {
-        arr[i] = true;
-    }
-
-    var p = 2;
-    while (true) {
-        for (var i = p * 2; i < arr.length; i += p) {
-            arr[i] = false;
-        }
-
-        for (var i = p + 1; i < arr.length; i++) {
-            if (arr[i]) break;
-        }
-        p = i;
-
-        if ( Math.pow(p, 2) >= n ) break;
-    }
-
-    var sum = 0;
-    for (var i = 0; i <= arr.length; i++) {
-        if (arr[i]) sum += i;
-    }
-
-    return sum;
-}
-
-console.log( reshetoErato(100) );  // => 1060
+// function reshetoErato(n) {
+//
+//     var arr = [];
+//     for (var i = 2; i <= n; i++) {
+//         arr[i] = true;
+//     }
+//
+//     var p = 2;
+//     while (true) {
+//         for (var i = p * 2; i < arr.length; i += p) {
+//             arr[i] = false;
+//         }
+//
+//         for (var i = p + 1; i < arr.length; i++) {
+//             if (arr[i]) break;
+//         }
+//         p = i;
+//
+//         if ( Math.pow(p, 2) >= n ) break;
+//     }
+//
+//     var sum = 0;
+//     for (var i = 0; i <= arr.length; i++) {
+//         if (arr[i]) sum += i;
+//     }
+//
+//     return sum;
+// }
+//
+// console.log( reshetoErato(100) );  // => 1060
 
 
 
 // taks 10
-// <<<<<<<<<< TO ADD LATE >>>>>>>>>>
+// function getMaxSubSum(arr) {
+//     var maxSum = 0;
+//
+//     for (var i = 0; i < arr.length; i++) {
+//         var tmpSum = 0;
+//         for (var j = i; j < arr.length; j++) {
+//             tmpSum += arr[j];
+//             maxSum = Math.max(maxSum, tmpSum);
+//         }
+//     }
+//
+//     return maxSum;
+// }
+//
+//
+// console.log( getMaxSubSum([-1, 2, 3, -9]) );       // = 5 (сумма выделенных)
+// console.log( getMaxSubSum([2, -1, 2, 3, -9]) );    // = 6
+// console.log( getMaxSubSum([-1, 2, 3, -9, 11]) );   // = 11
+// console.log( getMaxSubSum([-2, -1, 1, 2]) );       // = 3
+// console.log( getMaxSubSum([100, -9, 2, -3, 5]) );  // = 100
+// console.log( getMaxSubSum([1, 2, 3]) );             // = 6 (неотрицательные - берем всех)
