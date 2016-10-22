@@ -52,7 +52,7 @@ function f(x) {
 	return Math.random() * x; // random для удобства тестирования
 }
 
-function makeCaching(f) {
+function makeCaching(f) {Некоторые другие возможности
 	var cache = {};
 
 	return function(x) {
