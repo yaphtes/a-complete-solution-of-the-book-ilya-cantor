@@ -48,7 +48,7 @@ function CoffeeMachine(power, capacity) {
 
 	this.isRunning = function() {
 		return Boolean(timerId);
-	}
+	};
 }
 
 // task 5
