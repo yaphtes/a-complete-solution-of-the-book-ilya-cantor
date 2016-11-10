@@ -1,5 +1,18 @@
 'use strict';
 
+function Machine(power) {
+	this._power = power;
+	this._enable = false;
+
+	this.enable = function() {
+		this._enable = true;
+	};
+
+	this.disable = function() {
+		this._enable = false;
+	};
+}
+
 function CoffeeMachine(power, capacity) {
 	// Унаследовали Machine
 	// Machine.call(this);
@@ -62,19 +75,6 @@ function CoffeeMachine(power, capacity) {
 	this.disable = function() {
 		parentDisable.call(this);
 		clearTimeout(timerId);
-	};
-}
-
-function Machine(power) {
-	this._power = power;
-	this._enable = false;
-
-	this.enable = function() {
-		this._enable = true;
-	};
-
-	this.disable = function() {
-		this._enable = false;
 	};
 }
 
