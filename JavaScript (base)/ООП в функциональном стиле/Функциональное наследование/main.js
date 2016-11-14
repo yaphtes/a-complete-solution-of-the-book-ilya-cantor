@@ -13,6 +13,47 @@ function Machine(power) {
 	};
 }
 
+function Fridge(power) {
+	Machine.apply(this, arguments);
+
+	var food = [];
+	var maxItems = this._power / 100;
+
+	this.filterFood = function(fn) {
+		return food.filter(fn);
+	};
+
+	this.removeFood = function(item) {
+		var index = food.indexOf(item);
+		if (index != -1) {
+			food.splice(index, 1);
+		}
+	};
+
+	this.addFood = function(...items) {
+		if (this._enable == false) {
+			throw new Error('Нельзя добавить еду в выключенный холодильник');
+		} if (food.length + arguments.length >= maxItems) {
+			throw new Error(`Нельзя добавить больше, чем ${maxItems} еды`);
+		} else {
+			food.push(...items);
+		}
+	};
+
+	this.getFood = function() {
+		var result = food;
+		return result;
+	};
+
+	var parentDisable = this.disable;
+	this.disable = function() {
+		if (food.length) {
+			throw new Error('Ошибка, в холодильнике есть еда');
+		}
+		parentDisable.call(this);
+	};
+}
+
 function CoffeeMachine(power, capacity) {
 	// Унаследовали Machine
 	// Machine.call(this);
@@ -75,47 +116,6 @@ function CoffeeMachine(power, capacity) {
 	this.disable = function() {
 		parentDisable.call(this);
 		clearTimeout(timerId);
-	};
-}
-
-function Fridge(power) {
-	Machine.apply(this, arguments);
-
-	var food = [];
-	var maxItems = this._power / 100;
-
-	this.filterFood = function(fn) {
-		return food.filter(fn);
-	};
-
-	this.removeFood = function(item) {
-		var index = food.indexOf(item);
-		if (index != -1) {
-			food.splice(index, 1);
-		}
-	};
-
-	this.addFood = function(...items) {
-		if (this._enable == false) {
-			throw new Error('Нельзя добавить еду в выключенный холодильник');
-		} if (food.length + arguments.length >= maxItems) {
-			throw new Error(`Нельзя добавить больше, чем ${maxItems} еды`);
-		} else {
-			food.push(...items);
-		}
-	};
-
-	this.getFood = function() {
-		var result = food;
-		return result;
-	};
-
-	var parentDisable = this.disable;
-	this.disable = function() {
-		if (food.length) {
-			throw new Error('Ошибка, в холодильнике есть еда');
-		}
-		parentDisable.call(this);
 	};
 }
 
