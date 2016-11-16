@@ -5,7 +5,7 @@
  * @return {number}
  */
 function getRandomInt(min, max) {
-    return Math.floor( Math.random() * (max + 1 - min) );
+	return Math.floor(Math.random() * (max + 1 - min));
 }
 
 
@@ -14,6 +14,6 @@ function getRandomInt(min, max) {
  * @param  {number} n
  * @return {Boolean}
  */
-function isNumber(n)  {
-    return !isNaN( parseFloat(n) ) && isFinite(n);
+function isNumber(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);
 }
