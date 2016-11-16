@@ -101,46 +101,38 @@ Promise.prototype.then(onFulfilled: fn(value: ?), onRejected: fn(reason: ?))
 		// TypedArrays extends Array.prototype
 
 	Map(iterable?: [?])
-	Map.prototype.set(key: ?, value: ?)
-	Map.prototype.get(key: ?)
-	Map.prototype.delete(key: ?)
-	Map.prototype.entries()
-	Map.prototype.keys()
-	Map.prototype.values()
-	Map.prototype.has(key: ?)
-	Map.prototype.clear()
 	Map.prototype.size
+	Map.prototype.clear()
+	Map.prototype.delete(key: ?)  // => boolean
+	Map.prototype.entries()
+	Map.prototype.forEach(callback: fn(value: ?, key: ?, map: Map), thisArg?: ?)
+	Map.prototype.get(key: ?)
+	Map.prototype.has(key: ?)  // => boolean
+	Map.prototype.keys()
+	Map.prototype.set(key: ?, value: ?)
+	Map.prototype.values()
 
 	WeakMap()
-	WeakMap.prototype.set(key: ?, value: ?)
-	WeakMap.prototype.get(key: ?)
 	WeakMap.prototype.delete(key: ?)
-	WeakMap.prototype.entries()
-	WeakMap.prototype.keys()
-	WeakMap.prototype.values()
+	WeakMap.prototype.get(key: ?)
 	WeakMap.prototype.has(key: ?)
-	WeakMap.prototype.clear()
-	WeakMap.prototype.size
+	WeakMap.prototype.set(key: ?, value: ?)
 
 	Set(iterable?: [?])
+	Set.prototype.size
 	Set.prototype.add(value: ?)
-	Set.prototype.has(key: ?)
+	Set.prototype.clear()
 	Set.prototype.delete(key: ?)
 	Set.prototype.entries()
-	Set.prototype.keys()
+	Map.prototype.forEach(callback: fn(value: ?, key: ?, map: Map), thisArg?: ?)
+	Set.prototype.has(key: ?)
 	Set.prototype.values()
-	Set.prototype.clear()
-	Set.prototype.size
+	Set.prototype.keys()
 
 	WeakSet(iterable?: [?])
 	WeakSet.prototype.add(value: ?)
 	WeakSet.prototype.has(key: ?)
 	WeakSet.prototype.delete(key: ?)
-	WeakSet.prototype.entries()
-	WeakSet.prototype.keys()
-	WeakSet.prototype.values()
-	WeakSet.prototype.clear()
-	WeakSet.prototype.size
 
 
 // Other
