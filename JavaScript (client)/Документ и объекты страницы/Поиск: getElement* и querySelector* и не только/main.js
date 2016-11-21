@@ -1,4 +1,4 @@
-// task 1
+// task 1 (Поиск элементов)
 document.getElementById('age-table').getElementsByTagName('label');
 
 document.getElementById('age-table').getElementsByTagName('td')[0];
@@ -17,7 +17,7 @@ document.querySelector('form[name="search-person"] [name="info[0]"]');
 
 
 
-// task 2
+// task 2 (Дерево)
 let lis = document.getElementsByTagName('li');
 
 for (var i = 0; i < lis.length; i++ {

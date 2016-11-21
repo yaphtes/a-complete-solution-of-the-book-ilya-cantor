@@ -1,4 +1,4 @@
-// task 1
+// task 1 (Полифилл для matches)
 if (Element.prototype.matches === undefined) {
 	Element.prototype.matches = Element.prototype.matchesSelector ||
 		Element.prototype.webkitMatchesSelector ||
@@ -8,7 +8,7 @@ if (Element.prototype.matches === undefined) {
 
 
 
-// task 2
+// task 2 (Полифилл для closest)
 if (Element.prototype.closest === undefined) {
 	Element.prototype.closest = function(cssSelector) {
 		var node = this;
@@ -27,7 +27,7 @@ if (Element.prototype.closest === undefined) {
 
 
 
-/// task 3
+/// task 3 (Полифилл для textContent)
 if (document.documentElement.textContent == undefined) {
 	Object.defineProperty(document.documentElement, textContent, {
 		get: function() {
