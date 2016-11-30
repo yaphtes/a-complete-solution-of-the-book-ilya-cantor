@@ -1,0 +1,137 @@
+<!-- task 1 -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			#prompt-form {
+				/*display: inline-block;*/
+				padding: 5px 5px 5px 70px;
+				width: 200px;
+				border: 1px solid black;
+				background: white url("https://js.cx/clipart/prompt.png") no-repeat left 5px;
+				vertical-align: middle;
+				position: fixed;
+				left: calc(50% - 100px);
+			}
+
+			#prompt-form-container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9999;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				background: #ccc;
+			}
+			/*#prompt-form-container:before {
+				display: inline-block;
+				height: 100%;
+				content: '';
+				vertical-align: middle;
+			}*/
+
+			#prompt-form input[name="text"] {
+				display: block;
+				margin: 5px;
+				width: 180px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Нажмите на форму ниже</h1>
+		<button id="show">Нажмите для показа формы ввода</button>
+
+		<div id="prompt-form-container" hidden>
+
+			<form hidden id="prompt-form" tabindex="0">
+				<div id="prompt-message">Введите, пожалуйста...
+					<br>Что-то..</div>
+				<input tabindex="1" name="text" type="text">
+				<input tabindex="2" type="submit" value="Ок">
+				<input tabindex="3" type="button" name="cancel" value="Отмена">
+			</form>
+		</div>
+
+		<script src="main.js" charset="utf-8"></script>
+	</body>
+</html> -->
+
+
+
+<!-- task 2 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			td input,
+			td select {
+				width: 150px;
+			}
+
+			label {
+				display: block;
+			}
+			.error-message {
+				color: red;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<form>
+			<table>
+				<tr>
+					<td>От кого</td>
+					<td>
+						<input name="from" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td>Ваш пароль</td>
+					<td>
+						<input name="password" type="password">
+					</td>
+				</tr>
+				<tr>
+					<td>Повторите пароль</td>
+					<td>
+						<input name="password2" type="password">
+					</td>
+				</tr>
+				<tr>
+					<td>Куда</td>
+					<td>
+						<select name="to">
+							<option></option>
+							<option value="1">Отдел снабжения</option>
+							<option value="2">Отдел разработки</option>
+							<option value="3">Директору</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			Сообщение:
+			<label>
+				<textarea name="message" style="display:block;width:400px;height:100px"></textarea>
+			</label>
+
+			<input type="button" onclick="validate(this.form)" value="Проверить">
+		</form>
+
+		<script src="main.js" charset="utf-8"></script>
+	</body>
+</html>

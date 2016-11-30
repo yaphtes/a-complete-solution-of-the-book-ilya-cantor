@@ -198,3 +198,14 @@
 // task 6 (Поле, предупреждающее о включенном CapsLock)
 let input = document.getElementById('input');
 let capsIndicator = document.getElementById('capsIndicator');
+
+input.onkeypress = function(event) {
+	let key = event.key;
+	let shift = event.shiftKey;
+
+	if (key != key.toLowerCase() && !shift) {
+		capsIndicator.hidden = false;
+	} else {
+		capsIndicator.hidden = true;
+	}
+};
